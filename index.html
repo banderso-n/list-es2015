@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META DATA -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <!--[if IE]>
+    <meta http-equiv="cleartype" content="on" />
+    <![endif]-->
+
+    <!-- SEO -->
+    <title>Movie Listing</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="index,follow,archive" />
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" media="screen, projection" href="assets/styles/screen.css" />
+</head>
+<body>
+    <div class="modal isHidden js-modal">
+        <div class="modal-view">
+            <span class="hdg hdg_modalTitle">Page Error</span>
+            <p>
+                There was an error loading the movies, please refresh your page and try again later.
+            </p>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="masthead">
+            <div class="masthead-header">
+                <h1 class="hdg hdg_pageTitle">Movie Listing</h1>
+            </div>
+
+            <form class="masthead-controls" id="js-form">
+                <fieldset>
+                    <legend class="isVisuallyHidden">Control how movies are listed.</legend>
+
+                    <label class="isVisuallyHidden" for="sort">Sort Movies</label>
+                    <select class="js-sort" name="sort" id="sort">
+                        <option value="critic-desc">Critics Score Descending</option>
+                        <option value="critic-asc">Critics Score Ascending</option>
+                        <option value="audience-desc">Audience Score Descending</option>
+                        <option value="audience-asc">Audience Score Ascending</option>
+                        <option value="theater-asc">Most Recent Theater Date</option>
+                        <option value="theater-desc">Oldest Theater Date</option>
+                    </select>
+
+                    <label class="isVisuallyHidden" for="limit">Limit number of movies</label>
+                    <select class="js-limit" name="limit" id="limit">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                    </select>
+
+                    <input type="submit" class="js-update" value="update" />
+                </fieldset>
+            </form> <!-- END masthead-controls -->
+        </div> <!-- END masthead -->
+
+
+        <ul class="mediaList" id="js-list">
+            <li class="mediaList-item">
+                <div class="mediaList-item-meta">
+                    <div class="media">
+                        <div class="media-img media-img_poster">
+                            <img class="js-thumbnail" src="http://content6.flixster.com/movie/11/17/13/11171304_mob.jpg" alt="Man of Steel" />
+                        </div>
+                        <div class="media-bd">
+                            <h2 class="hdg hdg_movieTitle js-title">Man of Steel</h2>
+                            <div class="stack">
+                                <div class="stack-chunk">
+                                    <ul class="hList mix-hList_spaced">
+                                        <li><span class="js-runtime">148 min.</span></li>
+                                        <li><span class="js-releaseDate">June 14, 2013</span></li>
+                                        <li><span class="js-mpaa">PG-13</span></li>
+                                    </ul>
+                                </div>
+                                <div class="stack-chunk">
+                                    <ul class="hList">
+                                        <li><span class="rating rating_rotten js-criticsRating">56 - Rotten</span></li>
+                                        <li><span class="rating rating_upright js-audienceRating">82 - Upright</span></li>
+                                    </ul>
+                                </div>
+                            </div> <!-- END stack -->
+                        </div> <!-- END media-bd -->
+                    </div> <!-- END media -->
+                </div> <!-- END mediaList-item-meta -->
+                <div class="mediaList-item-description">
+                    <p class="js-synopsis">A young boy learns that he has extraordinary powers and is not of this Earth. As a young man, he journeys to discover where he came from and what he was sent here to do. But the hero in him must emerge if he is to save the world from annihilation and become the symbol of hope for all mankind. -- (C) Warner Bros</p>
+                </div>
+            </li> <!-- END mediaList-item -->
+        </ul> <!-- END mediaList -->
+    </div> <!-- END page-wrapper -->
+
+    <script src="dist/bundle.js"></script>
+</body>
+</html>
